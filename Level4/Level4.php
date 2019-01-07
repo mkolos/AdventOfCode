@@ -1,3 +1,4 @@
+<?php
 $szam=0;
 $kod="iwrupvqb";
 $talalt=false;
@@ -17,10 +18,11 @@ do{
 
 echo $szam;
 echo "<br>".$result;
+?>
 
 A feladat 2. része
 ----------------------------------------------------------------------------------
-
+<?php
 $szam=0;
 $kod="iwrupvqb";
 $talalt=false;
@@ -40,3 +42,4 @@ do{
 
 echo $szam;
 echo "<br>".$result;
+?>
