@@ -1,4 +1,4 @@
-$string = "4x23x21
+4x23x21
 22x29x19
 11x4x11
 8x10x5
@@ -997,60 +997,4 @@ $string = "4x23x21
 10x15x23
 21x29x14
 20x29x30
-23x11x5";
-
-$array = explode("\n",$string);
-$array2= array();
-$i=0;
-$sum=0;
-
-foreach($array as $item){
-  $exp=explode("x",$item);
-  array_push($array2,$exp);
-  $i++;
-}
-
-foreach($array2 as $item){
-  
-  $oldal1=$item[0]*$item[1];
-  $oldal2=$item[0]*$item[2];
-  $oldal3=$item[1]*$item[2];
-  $min=min($oldal1,$oldal2,$oldal3);
-  $sum = $sum + 2*$oldal1+2*$oldal2+2*$oldal3+$min;
-}
-
- 
-echo $sum;
-
-Feladat 2. része
--------------------------------------------------------------
-
-$array = explode("\n",$string);
-$array2= array();
-$i=0;
-$sum=0;
-$szalag=0;
-
-foreach($array as $item){
-  $exp=explode("x",$item);
-  sort($exp, SORT_NUMERIC);
-  array_push($array2,$exp);
-  $i++;
-}
-
-foreach($array2 as $item){
-  $a=$item[0];
-  $b=$item[1];
-  $c=$item[2];
-  $oldal1=$item[0]*$item[1];
-  $oldal2=$item[0]*$item[2];
-  $oldal3=$item[1]*$item[2];
-  $min=min($oldal1,$oldal2,$oldal3);
-  $sum = $sum + 2*$oldal1+2*$oldal2+2*$oldal3+$min;
-  $szalag = ($szalag + $a + $a + $b + $b) + ($a * $b * $c);
-}
-
- 
-echo $sum;
-echo "<br>";
-echo $szalag;
+23x11x5
